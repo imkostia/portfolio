@@ -1,0 +1,188 @@
+    .header{
+    @include flex-view(row, space-between, flex-start);
+    border: 1px solid $border-color;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    .logo{
+        background-color: #ffffff;
+        padding: 15px;
+    }
+    .logo-name{
+        color: $text-header-color;
+        text-transform: uppercase;  
+        font-weight: 750;
+        letter-spacing: 2px;
+        font-size: 11px;
+    }
+    .menu-btn{
+        background-color: $white-bg-color;
+        padding: 15px 30px;
+        border-left: 1px solid $border-color;
+        z-index: 20;
+        .fas{
+            color: #bbbebf;
+        }
+        &:hover  .fas{
+            color: $hover-color;
+        }
+        &:hover .move-menu{
+            top: 0;
+            right: 0; 
+            transition: all 2s ease;
+        }
+    }
+    .menu{
+        @include list-view();
+        @include flex-view(row, flex-start, flex-start);
+        text-transform: uppercase;
+        color: $text-header-color;
+        font-size: 12px;
+        padding: 0px 20px;
+        display: none;
+        .menu-item{
+            color: $text-description-color;
+            letter-spacing: 2px;
+            transition: all .5s ease;
+            &:hover{
+                color: $hover-color;
+            }
+            &::after{
+                margin: 10px;
+                content: ' | ';
+            }
+            &:last-child:after{
+                content: none;
+            }
+        }
+    }
+    .navigation-group{
+        @include flex-view(row, flex-start, flex-start);
+    }
+    .header-serach{      
+        @include flex-view(row, space-between, center);                          
+        border-left: 1px solid $border-color;
+        padding-left: 50px; 
+        position: relative;
+        display: none;
+        .fas{
+            position: absolute;
+            top: 15px;
+            left: 18px;
+            color: #bbbebf;
+        }
+        &:hover > .header-search-field{
+            margin-right: 10px;     
+            width: 150px;
+        }
+    }
+    .header-search-field{
+            height: 30px;
+            width: 0;
+            margin: 8px 0px;
+            border: none;
+            transition: all .5s ease;
+            outline: none;
+            &:focus{
+                outline: none;
+            }
+    }
+    .move-menu{
+        @include list-view();
+        position: fixed;
+        top: 0;
+        max-width: 400px;
+        width: 100%;
+        right: -100%;
+        background-color: #ffffff;
+        z-index: 9999;
+        border: 1px solid $border-color;
+        height: 100vh;
+        transition: all 2s ease;
+        .left-front-box-header{
+            font-size: 11px;
+            margin: 15px 0px;
+            text-align: start;
+            padding: 0px;
+        }
+        .left-front-box-description{
+            font-size: 9px;
+            font-weight: 100;
+            padding: 0px 0px 15px 0px;
+            text-align: start;
+        }
+        .move-search{
+            width: 100%;
+            height: 40px;
+            border: 1px solid $border-color;
+            padding-left: 30px; 
+            font-size: 13px;
+            background-color: #f8f8f8;
+            &::placeholder{
+                color: #CCCCCC;
+            }
+            &:focus{
+                border: 2px solid #42c0b6;
+                outline: none;
+            }
+        }
+        .move-menu-item{
+            border-bottom: 1px solid $border-color;
+            margin: 30px 40px;
+            transition: all .5s ease;
+            &:hover{
+        
+                color: #42c0b6;
+            }
+            &:first-child{
+                border-bottom: 1px solid $border-color;
+                margin: 0px;
+                padding: 20px 40px;
+                position: relative;
+                &:before{
+                    content: url(../../public/img/musica-searcher.png);
+                    position: absolute;
+                    top: 30px;
+                    left: 48px;
+                }
+            }
+            &:nth-child(5){
+                margin-bottom: 0; 
+                border-bottom: none;
+            }
+            &:last-child{
+                padding: 30px 40px;
+                margin: 0;
+                border-top: 1px solid $border-color;
+                border-bottom: none;
+            }
+        }
+    }
+}
+.move-menu-btn{
+    color: $text-header-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 17px 50px;
+    text-align: center;
+    border: 1px solid $btn-border;
+    transition: all .5s ease;
+    &:hover{
+        border: 1px solid #42c0b6;
+        color: #42c0b6;
+    }
+}
+@keyframes move-menu{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        width: 400px;
+        transform: translateX(-400px);
+    }
+}

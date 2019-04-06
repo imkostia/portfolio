@@ -1,0 +1,74 @@
+.advantage-information{
+    background-color: #b74e91;
+    .content-headline{
+        font-size: 30px;
+    }
+    .content-text{
+        flex-wrap: wrap;
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .information{
+        padding: 40px 50px;
+    }
+    .advantage-information-table{
+        padding-left: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .information-table{
+            position: relative;
+            width: 49%;
+            border: 1px solid #ffffff40;
+            padding: 40px 80px;
+            background-color: #ffffff1c;
+            .content-headline{
+                font-size: 20px;
+            }
+            .content-text{
+                font-size: 16px;
+                line-height: 20px;
+            }
+            &:first-child::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/more.png);
+            }
+            &:nth-child(2)::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/locked-padlock.png);
+            }
+            &:nth-child(3)::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/gear-configuration-interface-symbol.png);
+            }
+            &:nth-child(4)::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/desktop-monitor.png);
+            }
+            &:nth-child(5)::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/link-symbol.png);
+            }
+            &:last-child::before{
+                position: absolute;
+                left: 30px;
+                top: 50px;
+                content: url(../../public/icons/diamond.png);
+            }
+        }
+    }
+    .content-button{
+        margin-left: 50px;
+        margin-bottom: 80px;
+    }
+}

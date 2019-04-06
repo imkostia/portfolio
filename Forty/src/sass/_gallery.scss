@@ -1,0 +1,145 @@
+.img-1{
+    background-image: url(../../public/img/457642.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #55a0a0;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.img-2{
+    background-image: url(../../public/img/marc-kleen-544354-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #704c8c;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.img-3{
+    background-image: url(../../public/img/meik-schneider-321596-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #af8e54;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.img-4{
+    background-image: url(../../public/img/oboitut.com_1520842155.jpg);
+    background-size: cover;
+    background-position: left;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #8b8989;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.img-5{
+    background-image: url(../../public/img/nissam-gt-r-r35-rear-ligth-sport-car.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        background-color: #537e9c;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.img-6{
+    background-image: url(../../public/img/matt-antonioli-549554-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background-color: #9c5252;
+        opacity: 0.9;
+        z-index: 10;
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        opacity: 0.2;
+        transition: all .5s ease;
+    }
+}
+.gallery{
+    .gallery-line{
+        position: relative;
+        @include flex-view(row, flex-start, flex-start);
+        height: 300px;
+        .gallery-line-block-1{
+            @include flex-view(column, center, flex-start);
+            padding: 40px 60px;
+            width: 40%;
+            height: 100%;
+        }   
+        .gallery-line-block-2{
+            @include flex-view(column, center, flex-start);
+            padding: 40px 60px;
+            width: 60%;
+            height: 100%;
+        }
+    }
+}

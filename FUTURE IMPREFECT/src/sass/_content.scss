@@ -1,0 +1,121 @@
+.content-block{
+    .content{
+        border-top: 1px solid $border-content-color;
+        border-bottom: 1px solid $border-content-color;
+        background-color: white;
+        margin-top: 30px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    .content-header-box{
+        @include flex-view(column, flex-start, center);
+    }
+    .left-front-box-header{
+        margin-top: 40px;
+        transition: all .3s ease;
+        &:hover{
+            transition: all .3s ease;
+            color: $hover-color;
+        }
+    }
+    .left-front-box-description{
+        font-size: 12px;
+        padding-top: 0;
+    }
+    .date-box{
+        @include flex-view(column, flex-start, center);
+        text-align: center;
+        margin-top: 20px;
+        .img{
+            background-image: url(../../public/img/photo_2018-09-15_20-33-42.jpg);
+            margin-top: 0;
+            height: 40px;
+            width: 40px;
+            clip-path: circle(50% at 50% 50%);
+        }
+        .user-date{
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            font-weight: 800;
+            color: $text-header-color;
+        }
+        .user-name{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10px;
+            font-weight: 500;
+            display: none;
+        }
+    }
+    .content-main-box{
+        padding-bottom: 30px;
+        .description{
+            padding: 20px;
+            color: $text-description-color;
+            line-height: 24px;
+            font-size: 16px;
+        }
+        .move-menu-btn{
+            margin: 0px 20px;
+        }
+        .statistic-box{
+            font-size: 12px;
+            padding: 0px 20px 40px 20px;
+            .statistic{
+                @include flex-view(row, center, center);
+                @include list-view();
+            }
+            .statistic-item{
+                color: #c7c7c7;
+                a{
+                    color: #c7c7c7;
+                }
+                &::after{
+                    padding: 0px 20px;
+                    content: ' | ';
+                    color: #c7c7c7;
+                }
+                &:last-child:after{
+                    content: none;
+                }
+                &:last-child:before{
+                    content: url(../../public/img/chat.png);
+                    padding-right: 10px;
+                    width: 10px;
+                }
+                &:nth-child(2):before{
+                    content: url(../../public/img/like.png);
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+.content-image{
+    margin-top: 40px;
+    width: 100%;
+    height: 30%;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 25px #BDBDBD;
+    background-size: 100%;
+    &:hover{
+        background-size: 110%;
+        transition: .3s;
+    }
+    &:not(:hover){
+        transition: .3s;
+    }
+}
+.image-1{
+    background-image: url(../../public/img/tmb_147518_3832.jpg);
+}
+.image-2{
+    background-image: url(../../public/img/Gory-Tyan_SHan.jpg);
+}
+.image-3{
+    background-image: url(../../public/img/ezgif.com-webp-to-jpg.jpg);
+}

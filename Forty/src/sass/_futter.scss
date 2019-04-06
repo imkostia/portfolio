@@ -1,0 +1,34 @@
+.futter{
+    padding: 60px;
+    background-color: #242943;
+    .sociable-list{
+        @include list-view();
+        @include flex-view(row, flex-start, flex-start);
+        margin-bottom: 30px;
+        .sociable-list-item{
+            margin-right: 20px;
+            color: $text-color;
+            transition: all .3s ease;
+            &:hover{
+                color: $hover-color;
+                transition: all .3s ease;
+            }
+        }
+    }
+    .futter-info{
+        @include list-view();
+        @include flex-view(row, flex-start, flex-start);
+        color: #ffffff3d;
+        font-size: 14px;
+        .futter-info-item{
+            padding-right: 20px;
+            &::after{
+                content: '|';
+                padding-left: 20px;
+            }
+            &:last-child:after{
+                content: none;
+            }
+        }
+    }
+}

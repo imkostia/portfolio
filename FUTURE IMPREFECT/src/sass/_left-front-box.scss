@@ -1,0 +1,32 @@
+.left-front-box{
+    margin-top: 30px; 
+    background-color: $main-background-color;
+    @include flex-view(column, center, center);
+    padding-bottom: 40px;
+}
+.img{
+    background-image: url(../../public/img/fox.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 75px;
+    width: 75px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-top: 40px;
+}
+.left-front-box-header{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+}
+.left-front-box-description{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 100;
+    padding: 10px 20px;
+    line-height: 30px;
+    text-align: center;
+}

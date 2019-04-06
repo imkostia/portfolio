@@ -1,0 +1,33 @@
+.about{
+    margin: 40px 25px;
+    border-bottom: 1px solid $border-content-color;
+    padding-bottom: 40px;
+    .description{
+        color: #757575;
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+.futter{
+    margin: 40px 25px;
+    .sociable-icons, .privacy-info{
+        @include list-view();
+        @include flex-view(row, flex-start, flex-start);
+    }
+    .icon{
+        padding: 10px;
+    }
+    .fab, .fas{
+        color: $btn-border;
+        &:hover{
+            color: $hover-color;
+        }
+    }
+    .privacy-info{
+        font-size: 9px;
+        padding: 10px;
+        color: $btn-border;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}

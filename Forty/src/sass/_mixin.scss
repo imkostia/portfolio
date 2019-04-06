@@ -1,0 +1,11 @@
+@mixin flex-view($fd, $js, $at){
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $js;
+    align-items: $at;
+}
+@mixin list-view(){
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

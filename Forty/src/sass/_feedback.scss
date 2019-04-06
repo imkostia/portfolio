@@ -1,0 +1,90 @@
+.feedback{
+    background-color: #242943;
+    @include flex-view(row, flex-start, flex-start);
+    border: 1px solid #333955;
+    .feedback-auth{
+        width: 60%;
+        padding: 60px;
+        .feedback-auth-fields{
+            .nameANDemail{
+                @include flex-view(row, space-between, flex-start);
+            }
+            .input{
+                width: 49%;
+            }
+            .input-name{
+                color: $text-color;
+            }
+            .input-field{
+                background-color: #333955;
+                border: none;
+                padding: 10px;
+                color: $text-color;
+                &:first-child{
+                    width: 100%;
+                }
+                &:nth-child(2){
+                    width: 100%;
+                }
+                &:focus{
+                    border: 2px solid white;
+                }
+            }
+        }
+        .feedback-auth-buttons{
+            margin-top: 40px;
+            flex-wrap: wrap;
+            .feedback-button-1{
+                padding: 11px 20px;
+                background-color: $text-color;
+                font-size: 14px;
+                letter-spacing: 2px;
+                transition: all .3s ease;
+                &:hover{
+                    background-color: $hover-color;
+                    transition: all .3s ease;
+                }
+            }
+            .feedback-button-2{
+                margin-left: 20px;
+                padding: 9px 15px;
+                border: 2px solid $text-color;
+                font-size: 14px;
+                letter-spacing: 2px;
+                color: $text-color;
+                transition: all .3s ease;
+                &:hover{
+                    border: 2px solid $hover-color;
+                    color: $hover-color;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+    .feedback-auth-contacts{
+        width: 40%;
+        .contact-list{
+            @include list-view();
+            .contact-list-item{
+                padding: 25px 100px;
+                border: 1px solid #333955;
+                border-right: none;
+                border-top: none;
+                flex-wrap: wrap;
+                position: relative;
+                .gallery-line-topic{
+                    border-bottom: none;
+                }
+                .gallery-line-description{
+                    line-height: 30px;
+                }
+                .fas{
+                    color: $text-color;
+                    position: absolute;
+                    top: 35px;
+                    left: 45px;
+                }
+            }
+        }
+    }
+}

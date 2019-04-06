@@ -1,0 +1,68 @@
+.left-last-box{
+    padding-bottom: 20px;
+    .mini-posts{
+        border-bottom: 1px solid $border-content-color;
+    }
+    .mini-post{
+        background-color: white;
+        margin: 40px 20px;
+        border: 1px solid $border-content-color;
+    }
+    .post-img-1{
+        background-image: url(../../public/img/315193.jpg);
+    }
+    .post-img-2{
+        background-image: url(../../public/img/1469279881192614527.jpg);
+    }
+    .post-img-3{
+        background-image: url(../../public/img/london-st-pauls-cathedral.jpg);
+    }
+    .post-img-4{
+        background-image: url(../../public/img/PARIS-1513078302.jpg);
+    }
+    .content-image{
+        box-shadow: none;
+        margin-top: 0;
+    }
+    .post-info{
+        padding: 20px;
+        @include flex-view(row, space-between, flex-start);
+    }
+    .info{
+        @include flex-view(column, space-between, flex-start);
+    }
+    .left-front-box-header{
+        text-align: left;
+        padding: 0;
+        font-size: 10px;
+        margin-bottom: 5px; 
+    }
+    .user-date{
+        font-size: 12px;
+        color: #7d746f;
+    }
+    .img{
+        background-image: url(../../public/img/photo_2018-09-15_20-33-42.jpg);
+        margin-top: 0;
+        height: 40px;
+        width: 40px;
+        clip-path: circle(50% at 50% 50%);
+    }
+    .size{
+        width: 60px;
+        height: 60px;
+    }
+    .history-posts{
+        margin-top: 30px;
+        .post-info{
+            padding: 0px 20px;
+        }
+    }
+    .history-post{
+        @include flex-view(row, flex-start, flex-start);
+        margin: 10px 25px;
+        padding: 20px 0px;
+        border-bottom: 1px solid $border-content-color;
+    }
+    
+}

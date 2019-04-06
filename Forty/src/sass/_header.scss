@@ -1,0 +1,118 @@
+.header{
+    position: relative;
+    .logo-line{
+        @include flex-view(row, space-between, flex-start);
+        .logo-wrap{
+            padding: 10px;
+            z-index: 9999;
+            .logo-name{
+                background-color: $text-color;
+                padding: 2px 10px;
+                transition: all .3s ease;
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            .logo-next-name{
+                color: $text-color;
+                transition: all .3s ease;
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            &:hover .logo-name{
+                background-color: $hover-color;
+                color: black;
+                transition: all .3s ease;
+            }
+            &:hover .logo-next-name{
+                color: $hover-color;
+                transition: all .3s ease;
+            }
+        }
+        .menu{
+            z-index: 9999;
+            @include flex-view(row, flex-start, flex-start);
+            padding: 10px;
+            .fas{
+                color: $text-color;
+                padding-left: 10px; 
+                transition: all .3s ease;
+            }
+            .menu-button{
+                color: $text-color;
+                transition: all .3s ease;
+                font-size: 12px;
+                letter-spacing: 3px;
+            }
+            &:hover .menu-button{
+                color: $hover-color;
+                transition: all .3s ease;
+            }
+            &:hover .fas{
+                color: $hover-color;
+                transition: all .3s ease;
+            }
+        }
+    }
+    .content{
+        @include flex-view(column, center, flex-start);
+        padding: 60px;
+        height: 100vh;
+        .content-topic{
+            width: 100%;
+            border-bottom: 2px solid $text-color; 
+            z-index: 9999;
+            .content-topic-text{
+                color: $text-color;
+                font-size: 44px;
+            }
+        }
+        .content-description{
+            flex-wrap: wrap;
+            @include flex-view(row, flex-start, flex-start);
+            width: 60%;
+            margin-top: 20px; 
+            z-index: 9999;
+            .content-description-text{
+                width: 65%;
+                color: $text-color;
+                font-size: 12px;
+                letter-spacing: 1px;
+                line-height: 18px; 
+            }
+            .access-button{
+                @include flex-view(row, flex-start, flex-start);
+            }
+        }
+    }
+}
+.access-button{
+    padding: 10px;
+    border: 2px solid $text-color;
+    margin: 8px 0px;
+    transition: all .3s ease;
+    .button{
+        letter-spacing: 2px;
+        padding: 2px 15px;
+        color: $text-color;
+        white-space: nowrap;
+        font-size: 12px;
+        transition: all .3s ease;
+    }
+    .fas{
+        padding-left: 10px; 
+        color: $text-color;
+        transition: all .3s ease;
+    }
+    &:hover{
+        border-color: $hover-color;
+        transition: all .3s ease;
+    }
+    &:hover .button{ 
+        color: $hover-color;
+        transition: all .3s ease;
+    }
+    &:hover .fas{
+        color: $hover-color;
+        transition: all .3s ease;
+    }
+}

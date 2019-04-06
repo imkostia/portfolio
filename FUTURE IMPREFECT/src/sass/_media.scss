@@ -1,0 +1,250 @@
+@media (min-width: 500px) {
+    .main{
+        .header{
+            .header-serach{
+                display: none;
+            }
+        }
+        .content-block{
+            .content-header-box{
+                border-bottom: 1px solid $border-color;
+                padding-bottom: 20px;
+                .left-front-box-description{
+                    text-align: center;
+                }
+            }
+            .date-box{
+                @include flex-view(row, flex-start, center);
+                .user-name{
+                    margin: 10px;
+                    display: block;
+                }
+                .img{
+                    margin: 10px;
+                }
+                .user-date{
+                    margin: 10px;
+                    padding-right: 10px;
+                    line-height: 30px;
+                    border-right: 1px solid $btn-border;
+                }
+            }
+            .content-main-box{
+                padding: 0px 25px 30px 25px;
+                .content-nav-system{
+                    @include flex-view(row-reverse, space-between, center);
+                }
+                .move-menu-btn{
+                    margin: 0;
+                    padding: 15px 40px;
+                }
+                .statistic-box{
+                    padding: 10;
+                }
+                .content-image{
+                    box-shadow: none;
+                }
+                .description{
+                    padding: 0px;
+                }
+            }
+        } 
+        .nav-btn{
+            .nav-btn-wrap{
+                @include flex-view(row, flex-start, flex-start);
+            }
+            .move-menu-btn{
+                margin: 20px 0px 20px 25px;
+                padding: 15px 40px;
+            }
+        }
+        .mini-posts{
+            @include flex-view(row, space-between, flex-start);
+            flex-wrap: wrap;
+            padding: 0px 25px 40px 25px;
+            .mini-post{
+                width: 48%;
+                margin: 0px;
+                margin-top: 40px;
+            }
+        }
+        .about{
+            .move-menu-btn{
+                width: 160px;
+                padding: 15px 30px;
+            }
+        }
+    }
+    
+}
+
+@media (min-width: 735px){
+    .main{
+        .content-block{
+            .content-main-box{
+                padding: 0px 40px 30px 40px;
+            }
+            .content-image{
+                height: 250px;
+            }
+        } 
+        .nav-btn{
+            .move-menu-btn{
+                margin: 20px 0px 20px 40px;
+                padding: 15px 40px;
+            }
+        }
+        .mini-posts{
+            padding: 0px 40px 40px 40px;
+        }
+        .history-posts{
+            padding: 0px 15px;
+        }
+        .about{
+            margin: 40px 40px;
+        }
+        .futter{
+            margin: 40px 40px;
+        }
+    }
+}
+@media (min-width: 980px){
+    .main{
+        .header{
+            .header-serach{
+                display: flex;
+            }
+            .logo{
+                border-right: 1px solid $border-color;
+            }
+            .logo-nav-group{
+                @include flex-view(row, flex-start, center);
+            }
+            .menu{
+                display: flex;
+            }
+        }
+        .content-block{
+            .content{
+                margin: 40px auto;
+                width: 90%;
+                border-top: none;
+                border-bottom: none;
+                border: 1px solid $border-content-color;
+            }
+            .content-image{
+                height: 400px;
+            }
+            .content-header-box{
+                @include flex-view(row, space-between, center);
+                padding-bottom: 0px;
+            }
+            .content-headers-group{
+                border-right: 1px solid $border-content-color;
+                padding: 40px 40px;
+                width: 70%;
+                .left-front-box-header{
+                    margin-top: 10px;
+                    padding: 0;
+                    text-align: left;
+                }
+                .left-front-box-description{
+                    padding: 0;
+                    text-align: left;
+                }
+            }
+            .date-box{
+                @include flex-view(column, flex-start, center);
+                margin-top: 25px;
+                padding-right: 40px;
+                .user-date{
+                    border-right: none;
+                }
+                .img-name-group{
+                    @include flex-view(row-reverse, flex-start, center);
+                }
+            }
+        }
+        .mini-posts{
+            .mini-post{
+                width: 48%;
+                min-height: 200px
+            }
+            .content-image{
+                height: 220px;
+            }
+        }
+        .about{
+            .left-front-box-header{
+                font-size: 15px;
+                font-weight: 600;
+            }
+            .description{
+                font-size: 13px;
+            }
+        }
+        
+    }
+}
+@media (min-width: 1280px){
+    main{
+        .left-front-box{
+            margin-top: 50px;
+            margin-left: 40px;
+            align-items: flex-start;
+            float: left;
+            width: 25%;
+            border-bottom: 1px solid $border-content-color;
+            .left-front-box-header{
+                font-size: 25px;
+                width: 50%;
+                padding-left: 0;
+                text-align: left;
+                line-height: 40px;
+            }
+            .img{
+                height: 70px;
+                width: 70px;
+            }
+            .left-front-box-description{
+                padding-left: 0;
+                text-align: left;
+                font-size: 13px;
+            }
+        }
+        .content-block{ 
+            margin-top: 100px;
+            width: 70%;
+            float: right;
+        }
+        .nav-btn{
+            width: 70%;
+            float: right;
+            border-bottom: none;
+            .nav-btn-wrap{
+                padding-left: 15px;
+            }
+        }
+        .left-last-box{
+            width: 30%;
+            .mini-posts{
+                flex-direction: column;
+                padding-left: 0px;
+                margin-left: 40px;
+                .mini-post{
+                    width: 100%;
+                }
+                .content-image{
+                    height: 170px;
+                }
+            }
+        }
+        .history-posts{
+            padding: 0 !important;
+            padding-left: 40px !important; 
+            .history-post{
+                margin: 0;
+            }
+        }
+    }
+}
